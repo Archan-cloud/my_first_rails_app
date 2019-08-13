@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://www.theodinproject.com/courses/web-development-101/lessons/your-first-rails-application?ref=lnav -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbolinks-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}</style>
+<!--
+    .
+  .o8
+.odin8o  .odino.  oo.ooooo.
+  888   d88' `88b  888' `88b
+  888   888   888  888   888
+  888 . 888   888  888   888
+  "888" `Y8odinP'  888bod8P'
+                   888
+                  odin!
+
+
+Our full stack curriculum is free and supported by a passionate open source community. Do you want to contribute? Chat with us at https://discord.gg/hvqVr6d
+-->
+
+  
+  
+<script type="text/javascript" async="" src="./Project_ Your First Rails Application _ The Odin Project_files/ga.js"></script><script type="text/javascript" async="" src="./Project_ Your First Rails Application _ The Odin Project_files/ga.js"></script><script type="text/javascript" src="./Project_ Your First Rails Application _ The Odin Project_files/17c82925e3"></script><script src="./Project_ Your First Rails Application _ The Odin Project_files/nr-1130.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"17c82925e3","applicationID":"2418536","transactionName":"d1xcEEpcDg1RS05DRVFBQUtLWw0W","queueTime":8,"applicationTime":167,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  <link rel="stylesheet" media="all" href="./Project_ Your First Rails Application _ The Odin Project_files/application-f3bc8f7af4d431d5101cd5b628e8a85de43a77db7f9942acd781482cdfe08d44.css">
+  <link href="./Project_ Your First Rails Application _ The Odin Project_files/css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./Project_ Your First Rails Application _ The Odin Project_files/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="./Project_ Your First Rails Application _ The Odin Project_files/application-fd8d78c53996df472279eb7f9022a75689ff37d3ff92dc6007f81f12eefb8920.js"></script>
+  
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"17c82925e3","applicationID":"2418536","transactionName":"d1xcEEpcDg1RS05aU0dAXQpLHBEJW04=","queueTime":8,"applicationTime":88,"agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"17c82925e3","applicationID":"2418536","transactionName":"d1xcEEpcDg1RS05aU0dAXQpLHBEJW04=","queueTime":29,"applicationTime":82,"agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"17c82925e3","applicationID":"2418536","transactionName":"d1xcEEpcDg1RS05aU0dAXQpLHBEJW04=","queueTime":8,"applicationTime":329,"agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"17c82925e3","applicationID":"2418536","transactionName":"d1xcEEpcDg1RS05aU0dAXQpLHBEJW04=","queueTime":5,"applicationTime":527,"agent":""}</script><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="The Odin Project empowers aspiring web developers to learn together"><meta name="keywords" content="learn web development, learn ruby on rails, ruby on rails, ruby, rails"><meta property="og:image" content="https://www.theodinproject.com/assets/og-logo-003bdac3098010b4f1143000a941b80c67eebd74fbc6f36b2e7ef92dd03e8020.png"><link rel="apple-touch-icon" sizes="180x180" href="https://www.theodinproject.com/apple-touch-icon.png"><link rel="icon" type="image/png" href="https://www.theodinproject.com/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="https://www.theodinproject.com/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="https://www.theodinproject.com/manifest.json"><link rel="mask-icon" href="https://www.theodinproject.com/safari-pinned-tab.svg" color="#5bbad5"><title>
+    Project: Your First Rails Application | The Odin Project
+  </title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="ATtNsZcmsUQxXcw2iT5h7REjyelqjH5TSBOSzJFPOV1Fg/tvngI/vjEg5JdQKsnFn7OvmMZWw9jn7KSm3kIzQA=="></head>
+
+
+  <body>
+    <div id="global-content-wrapper">
+      <div id="navbar-supported-content" class="modal modal-fullscreen-menu fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="navbar-brand">
+          <a class="logo" href="https://www.theodinproject.com/home">
+  <img class="logo__img" src="./Project_ Your First Rails Application _ The Odin Project_files/odin-logo-94557650fea28e24cc04263ece9c08ab5956e0d344faa4d03cdb732e9f9983d4.svg">
+  <div class="logo__text"> The Odin Project </div>
+</a>
+        </div>
+        <button aria-label="Close" type="button" class="close" data-dismiss="modal">
+          <span class="sr-only">Close navigation</span>
+          <span class="close-icon">×</span>
+        </button>
+      </div>
+      <ul class="modal-links">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://www.theodinproject.com/dashboard?ref=homenav">Dashboard</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="https://www.theodinproject.com/tracks/1">Curriculum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://forum.theodinproject.com/">Forum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link gitter-chat-link" target="_blank" rel="noreferrer" href="https://discord.gg/hvqVr6d">Chat</a>
+          </li>
+
+          <div class="dropdown-divider"></div>
+          <li class="nav-item ">
+            <a class="nav-link" href="https://www.theodinproject.com/users/edit">Settings</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.theodinproject.com/logout?ref=homenav">Log Out</a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="navbar navbar-expand-md navbar-light">
+  <div class="navbar-brand">
+    <a class="logo" href="https://www.theodinproject.com/home">
+  <img class="logo__img" src="./Project_ Your First Rails Application _ The Odin Project_files/odin-logo-94557650fea28e24cc04263ece9c08ab5956e0d344faa4d03cdb732e9f9983d4.svg">
+  <div class="logo__text"> The Odin Project </div>
+</a>
+  </div>
+
+  <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="modal" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="toggle-navigation">
+    <span class="navbar-toggler-icon open"></span>
+    <span class="sr-only">Open navigation</span>
+  </button>
+
+    <nav class="collapse navbar-collapse">
+      <!-- Full Width Navbar -->
+      <ul class="navbar-nav ml-auto hidden-md-down">
+        <li class="nav-item ">
+          <a class="nav-link" href="https://www.theodinproject.com/tracks/1?ref=homenav">My courses</a>
+        </li>
+        <li class="nav-item dropdown js-dropdown">
+          <a class="nav-link dropdown-toggle" href="https://www.theodinproject.com/courses/web-development-101/lessons/your-first-rails-application?ref=lnav#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Community
+          </a>
+          <ul class="dropdown-menu dropdown-menu-right menu-options pb-0">
+            <li>
+              <a class="drop-down-link accent" target="_blank" rel="noreferrer" href="https://forum.theodinproject.com/">
+                <span class="drop-down-logo fas fa-users mt-2"></span>Forum
+</a>            </li>
+            <li>
+              <a class="drop-down-link accent" target="_blank" rel="noreferrer" href="https://discord.gg/hvqVr6d">
+                <span class="drop-down-logo fas fa-comment mt-2"></span>Chat
+</a>            </li>
+          </ul>
+        </li>
+
+        <li class="divider nav-link">|</li>
+        <div class="dropdown js-dropdown">
+  <button class="avatar" aria-label="User Menu" style="background-image:url(https://avatars2.githubusercontent.com/u/53893786?v=4)" data-toggle="dropdown"></button>
+  <ul class="dropdown-menu menu-options">
+    <li id="dash-active">
+      <a class="drop-down-link accent " href="https://www.theodinproject.com/dashboard">
+        <span class="drop-down-logo dashboard-logo"></span>Dashboard
+</a>    </li>
+    <li>
+      <a class="drop-down-link accent " href="https://www.theodinproject.com/users/edit">
+        <span class="drop-down-logo settings-logo"></span>Settings
+</a>    </li>
+    <li>
+      <a class="drop-down-link accent" href="https://www.theodinproject.com/logout?ref=homenav">
+        <span class="drop-down-logo logout-logo"></span>Log out
+</a>    </li>
+  </ul>
+</div>
+
+      </ul>
+    
+  </nav>
+</div>
+
+
+<div class="nav-spacer"></div>
+
+<div class="container">
+</div>
+
+
+
+
+
+
+      
+
+<div class="container lesson">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="lesson-header">
+        <a class="course-card-header__link" href="https://www.theodinproject.com/courses/web-development-101">
+          <div class="banner">
+  <div class="banner__badge">
+      <div class="course-badge progress-circle " data-progress="27">
+    <div class="progress-circle__inner">
+      <img alt="Web Development 101 badge" class="progress-circle__image" src="./Project_ Your First Rails Application _ The Odin Project_files/badge-webdev-101-borderless-5be2358143afcfee5374693899dd27dc6a8cb567127f504aeeef400bd999ae75.svg">
+      <p class="bold progress-circle__content">27%</p>
+      <p class="progress-circle__content">COMPLETE</p>
+    </div>
+  </div>
+
+  </div>
+  <h1 class="banner__title">Web Development 101</h1>
+</div>
+
+</a>        <h2 class="lesson-header__title accent">Project: Your First Rails Application</h2>
+      </div>
+    </div>
+
+    <div class="col-lg-3 d-none">
+      <div class="d-none d-lg-block d-xl-block lesson-navigation"></div>
+    </div>
+
+    <div class="col-lg-9">
+      <div class="lesson-content">
+        <div id="introduction" class="scrollspy"><h3><a href="https://www.theodinproject.com/courses/web-development-101/lessons/your-first-rails-application?ref=lnav#introduction" class="internal-link">Introduction</a></h3><p>With Ruby installed, you’re all set to create your first Ruby on Rails application!</p><p>Before continuing, let’s review a few best practices to keep in mind:</p><ul>
+  <li>Follow the directions closely, and don’t skip over any sections.</li>
+  <li><strong>Do NOT use <code>sudo</code> unless The Odin Project specifically says to do so.</strong> Failing to follow this advice can cause <em>a lot</em> of headaches. In some instances, you might see a message in the terminal telling you to use <code>sudo</code> and/or to install something with <code>apt</code>. <strong>Ignore what the terminal says</strong> and follow the instructions below.</li>
+  <li>Copy and paste the commands to avoid typos.</li>
+  <li>If you stop working on this project partway through and come back to it later, be sure to use <code>cd</code> to move back inside your project directory so that the commands will work.</li>
+</ul><p>In this project, we’re going to build a fully functional Rails application. The entire point of this exercise is to make sure that you have everything installed and working correctly on your computer. Do <em>not</em> worry if you don’t fully understand what you’re doing. You’ll learn exactly what all of these commands are doing later on in the course. For now, go slowly, and be sure to follow <strong>each and every</strong> step closely. If you run into trouble, don’t forget that you can always reach out for help on <a href="https://discord.gg/hvqVr6d" target="_blank" rel="noreferrer">Discord</a>.</p><p><strong>Reminder</strong>: In this lesson you’ll see shaded boxes that contain text like the one below.</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">whoami</span>
+</code></pre><p>Those are terminal commands and you’ll need to enter them on the terminal in your operating system. Forgot how to open your terminal? Try googling “how to open terminal in [<strong>your operating system</strong>]”.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="your-first-rails-app"><h3><a href="https://www.theodinproject.com/courses/web-development-101/lessons/your-first-rails-application?ref=lnav#your-first-rails-app" class="internal-link">Your First Rails App</a></h3></div>
+
+<div id="step-1-create-your-first-ruby-on-rails-web-application"><h3><a href="https://www.theodinproject.com/courses/web-development-101/lessons/your-first-rails-application?ref=lnav#step-1-create-your-first-ruby-on-rails-web-application" class="internal-link">Step 1: Create Your First Ruby on Rails Web Application</a></h3><p>Don’t worry if you don’t totally understand what you are doing in these next steps. You will learn what all of this does later in The Odin Project curriculum. As long as the commands complete successfully, just keep going. The main reason we’re doing this is to ensure everything is properly installed and configured.</p><h4 id="step-11-install-rails-and-bundler">Step 1.1: Install Rails and Bundler</h4><p>We’ve previously installed Ruby, and now it’s time to install Ruby on Rails. It’s as simple as running one command!</p><pre class=" language-bash"><code class=" language-bash">gem <span class="token function">install</span> rails
+</code></pre><h4 id="step-12-lay-the-groundwork">Step 1.2: Lay the Groundwork</h4><p>Next, if you haven’t already done it, we need to create a directory that will house our project. You can name it anything you like!</p><p><strong>NOTE TO WSL USERS:</strong> If you are on WSL, you MUST <code>cd</code> into your <code>Projects</code> folder to avoid issues.</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">mkdir</span> odin_on_rails
+</code></pre><p>Then, move into the new directory:</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">cd</span> odin_on_rails
+</code></pre><h4 id="step-13-create-the-application">Step 1.3: Create the Application</h4><p>This is where things might become more foreign. If you don’t understand what’s going on, just double check that you’re typing in the correct commands and keep going. This section is meant to expose you to the process and to verify that everything is working. Again, it’s OK to not understand what’s going on at this point.</p><p>We’re going to start by telling Rails to initialize the application for us. Then, we’ll tell Rails to create a template for us so that we can get up and running.</p><pre class=" language-bash"><code class=" language-bash">rails new my_first_rails_app
+</code></pre><p>This will do a bunch of things, and you’ll see a lot of output in the terminal. If everything worked, you should see something similar to this in the last few lines of output:</p><pre class=" language-bash"><code class=" language-bash">Bundle complete<span class="token operator">!</span> 18 Gemfile dependencies, 79 gems now installed.
+Use <span class="token variable"><span class="token variable">`</span>bundle info <span class="token operator">&lt;</span>gem name<span class="token operator">&gt;</span><span class="token variable">`</span></span> to see where a bundled gem is installed.
+</code></pre><p>In the above process, Rails created a new directory for us. Let’s <code>cd</code> into it now:</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">cd</span> my_first_rails_app
+</code></pre><p>Now, we’re going to tell Rails to generate some templates for us. This will get us up and running in no time at all.</p><pre class=" language-bash"><code class=" language-bash">rails generate scaffold car make:string model:string year:integer
+</code></pre><p>After generating the scaffolds, we need to migrate the database.</p><pre class=" language-bash"><code class=" language-bash">rails db:migrate
+</code></pre><h4 id="step-14-start-up-your-app">Step 1.4: Start Up Your App</h4><p>Now that you have created a Rails application, you can start it up and see if it works!</p><p>In the terminal, type</p><pre class=" language-bash"><code class=" language-bash">rails server
+</code></pre><p>Now, go to your browser and visit <a href="http://localhost:3000/cars" target="_blank" rel="noreferrer">http://localhost:3000/cars</a> to see your application! Go ahead and create a new car, and then refresh the page to verify it is working. Add as many cars as you’d like!</p><p>When you’re satisfied, go back to the terminal where Rails is running, and type <code>Ctrl + C</code> to end the application.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="step-2-initialize-git-and-push-to-github"><h3><a href="https://www.theodinproject.com/courses/web-development-101/lessons/your-first-rails-application?ref=lnav#step-2-initialize-git-and-push-to-github" class="internal-link">Step 2: Initialize Git and Push to GitHub</a></h3><p>To push our app to GitHub and Heroku, we need to use Git.</p><h5 id="step-21-initialize-git">Step 2.1: Initialize git</h5><p>To tell Git we want to use version control on the directory we are in, we need to initialize it.</p><p>Verify you’re in the <code>my_first_rails_app</code> directory by using the <code>pwd</code> (print working directory) command.</p><pre class=" language-bash"><code class=" language-bash">$ <span class="token function">pwd</span>
+/home/you/odin_on_rails/my_first_rails_app
+</code></pre><p>Then, initialize the Git repo (short for “repository”):</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> init
+</code></pre><h4 id="step-22-commit-changes">Step 2.2: Commit Changes</h4><p>Now that Git is initialized, we need to tell Git to save all the files we have. First, we add our files to the staging area, which temporarily holds files before committing them. Don’t worry if you don’t understand all of this right now.</p><p>To stage all our files, type</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
+</code></pre><p>Then, we’ll commit the files. Be sure to include the quotation marks.</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> commit -m <span class="token string">"initial commit"</span>
+</code></pre><h4 id="step-23-connect-the-local-repository-to-the-remote-repository">Step 2.3: Connect the Local Repository to the Remote Repository</h4><p>At this point, we have our files on our own computer and can track changes made to our files over time. But what if we want to share the files with another computer or have multiple people work on the same project? For this functionality, we need a GitHub repository.</p><p>First, open <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub.com</a> in your browser and sign in (if you aren’t already). Next, look for your profile picture in the upper right-hand corner, click the “+” symbol next to it, and then click <code>New repository</code>. Give the repository a name (maybe <code>my_first_rails_app</code>?), and then click <code>Create Repository</code>.</p><p>On the next page, you’ll see a bunch of commands listed. We’re really only interested in the SSH URL at the top, so double check that <code>SSH</code> has been selected and then copy the URL.</p><p>Now, switch back over to the terminal to connect the project and GitHub by running two simple commands:</p><p>NOTE: Do not enter the <code>&lt;</code> or <code>&gt;</code> symbols. Replace those symbols and everything between them with the URL that you copied from GitHub.</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> remote add origin <span class="token operator">&lt;</span>SSH URL from above<span class="token operator">&gt;</span>
+<span class="token function">git</span> push -u origin master
+</code></pre><p>Remember to replace <code>&lt;SSH URL from above&gt;</code> with the URL that you copied.</p><p>The terminal will start its work, pausing to verify your connection to GitHub.</p><p>A message from Github stating, “The authenticity of host ‘github.com’…” may appear during this process. You can type <code>yes</code> and hit <code>Enter</code> to continue.</p><p>After the terminal finishes its magic, return to your GitHub repository and refresh the page. You should see a lot of files, starting with a folder called “app”.</p><p>This marks the start of your Odin journey! Later on, you’ll be able to look back at this repository and marvel over how far you’ve come!</p><h4 id="step-3-deploy-your-rails-application">Step 3: Deploy Your Rails Application</h4><p>Now that you’ve created your first Rails application, it’s time to deploy it so that you can show the whole world! This process will allow you to send a link to people so they can see your app working.</p><h4 id="step-31-create-a-heroku-account">Step 3.1: Create a Heroku Account</h4><p>Go to the <a href="https://www.heroku.com/" target="_blank" rel="noreferrer">Heroku website</a> and create an account using the same email address you used for GitHub and Git.</p><h4 id="step-32-heroku-cli">Step 3.2: Heroku CLI</h4><p>Activate your account from the email they sent you. Now, we’ll install the Heroku command line so that we can interact with the Heroku service. We will use <code>curl</code> to download a script and run it to install the Heroku CLI. This script may ask for your <code>sudo</code> password, this is expected. Go ahead and type it in after running the command below.</p><p>Run this command:</p><pre class=" language-bash"><code class=" language-bash">curl https://cli-assets.heroku.com/install.sh <span class="token operator">|</span> sh
+</code></pre><p>This command needs administrative access and will ask for your sudo password. Enter the password of your computer account and press enter to continue.</p><p>Then, type <code>heroku version</code>, which should return something similar to <code>heroku/7.5.1 linux-x64 node-v10.5.0</code>.</p><h4 id="step-33-add-your-ssh-key-to-heroku">Step 3.3: Add your SSH Key to Heroku</h4><p>Adding your SSH key lets Heroku know what machine the commands are coming from, similar to how GitHub uses SSH keys.</p><p>In your terminal, type</p><pre class=" language-bash"><code class=" language-bash">heroku keys:add
+</code></pre><p>Next, press <code>y</code> and then <code>Enter</code>. Now, type in the email address you used to create your Heroku account and press <code>Enter</code>. Then, type in the password for your Heroku account. Next, press <code>y</code> and <code>Enter</code> to allow Heroku to upload your public SSH key.</p><p>The terminal may read <code>Invalid credentials provided</code>. Just press any key and the Heroku website will open in your browser. Log in with the information you created your account with, and the terminal will reappear and accept your public SSH key.</p><h4 id="step-34-create-a-heroku-application">Step 3.4: Create a Heroku Application</h4><p>First, run</p><pre class=" language-bash"><code class=" language-bash">heroku create
+</code></pre><p>Then, run</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> remote
+</code></pre><p>Verify that you see <code>heroku</code> in the output.</p><h4 id="step-35-prepare-rails-for-heroku-deployment">Step 3.5: Prepare Rails for Heroku Deployment</h4><p>Heroku uses a slightly different setup than what we have on our machine. We need to configure the application to play nicely with both.</p><h4 id="step-351-configure-the-gemfile">Step 3.5.1: Configure the Gemfile</h4><p>To deploy a Rails application, we need to change some settings.</p><p>First, we need to open the <code>Gemfile</code> and edit it.</p><p>In your terminal, type <code>ls</code> and verify that you see <code>Gemfile</code> in the output. If you don’t see it, navigate to the directory you created in Steps 2.2 and 2.3.</p><p>Then, we’ll use VSCode to modify the <code>Gemfile</code>. Open your app in VSCode by typing <code>code .</code> (<strong>NOTE: The period at the end is important!</strong>) (WSL users: If you type <code>code .</code> and you see <code>system32</code> in the top left, you have created your application outside of the <code>Projects</code> directory we created earlier.)</p><p>When VSCode opens, you should see a list of files on the left side of the screen. Click on <code>Gemfile</code> to open it in the editor. Then, delete the line that says,</p><pre class=" language-ruby"><code class=" language-ruby">gem <span class="token string">'sqlite3'</span>
+</code></pre><p>Replace the line you just deleted with the following:</p><pre class=" language-ruby"><code class=" language-ruby">group <span class="token symbol">:development</span><span class="token punctuation">,</span> <span class="token symbol">:test</span> <span class="token keyword">do</span>
+ gem <span class="token string">'sqlite3'</span>
+<span class="token keyword">end</span>
+
+group <span class="token symbol">:production</span> <span class="token keyword">do</span>
+  gem <span class="token string">'pg'</span>
+<span class="token keyword">end</span>
+</code></pre><p>Then, save the file. You can leave VSCode open since we’re going to be coming back to it, but for the next step, go back to your terminal.</p><h4 id="step-352-install-the-bundle">Step 3.5.2: Install the Bundle</h4><p>Next, we need to tell Ruby, Git, and Heroku that we’ve changed the <code>Gemfile</code>. To do this, we can simply run</p><pre class=" language-bash"><code class=" language-bash">bundle <span class="token function">install</span> --without production
+</code></pre><h4 id="step-353-configure-the-root-route">Step 3.5.3: Configure the Root Route</h4><p>The next thing we need to edit is the <code>routes.rb</code> file to set our root route. We’re going to this so that we can see the application without having to append <code>/cars</code> at the end of the URL.</p><p>Go back to VSCode and expand the <code>config</code> folder in the file list at the left-hand side of the screen. One of the files inside the folder will be named <code>routes.rb</code>. Open <code>routes.rb</code> and make it match the example below:</p><pre class=" language-ruby"><code class=" language-ruby"><span class="token constant">Rails</span><span class="token punctuation">.</span>application<span class="token punctuation">.</span>routes<span class="token punctuation">.</span>draw <span class="token keyword">do</span>
+  root <span class="token string">'cars#index'</span>
+  resources <span class="token symbol">:cars</span>
+<span class="token keyword">end</span>
+</code></pre><p>Save the file. You can close VSCode now; the rest of the steps take place in the terminal.</p><h4 id="step-36-add-changes-to-git">Step 3.6: Add Changes to Git</h4><p>Now that we have made some changes, we need to tell Git. This step is also required to successfully deploy to Heroku.</p><p>First, we’ll check which files have been updated by running</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> status
+</code></pre><p>The output should look similar to the example below:</p><pre class=" language-bash"><code class=" language-bash">$ <span class="token function">git</span> status
+On branch master
+Changes not staged <span class="token keyword">for</span> commit:
+  <span class="token punctuation">(</span>use <span class="token string">"git add &lt;file&gt;..."</span> to update what will be committed<span class="token punctuation">)</span>
+  <span class="token punctuation">(</span>use <span class="token string">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="token keyword">in</span> working directory<span class="token punctuation">)</span>
+
+	modified:   Gemfile
+	modified:   Gemfile.lock
+	modified:   config/routes.rb
+
+no changes added to commit <span class="token punctuation">(</span>use <span class="token string">"git add"</span> and/or <span class="token string">"git commit -a"</span><span class="token punctuation">)</span>
+</code></pre><p>Great! Now, let’s add the changes to staging:</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
+</code></pre><p>Then, commit the files in staging:</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> commit -m <span class="token string">'updates for heroku deployment'</span>
+</code></pre><p>While we’re here, we might as well push our changes to GitHub too:</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> push origin master
+</code></pre><h4 id="step-37-push-to-heroku">Step 3.7: Push to Heroku</h4><p>Now that we’ve commited the files, we can push to Heroku:</p><pre class=" language-bash"><code class=" language-bash"><span class="token function">git</span> push heroku master
+</code></pre><p><strong>UPDATE 2019-01-04:</strong> If you run into an error on the next command stating that you need to use Bundler 2 or greater with this lockfile, you’ll need to run:</p><p><code>
+heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2
+</code></p><p>and then run the <code>git push heroku master</code> command again.</p><p>This will send the app you created to Heroku. There will be a lot of output in your console. Wait for it to finish.</p><h4 id="step-38-migrate-the-database-on-heroku">Step 3.8: Migrate the Database on Heroku</h4><p>Similar to what we did locally before we launched our app, we need to migrate the database on Heroku, which we can do with the Heroku CLI.</p><p>Run this command:</p><pre class=" language-bash"><code class=" language-bash">heroku run rails db:migrate
+</code></pre><p>You might see some strange output, but as long as you do not have an error, you have successfully deployed a Rails application!</p><p>If you have an error, come to our <a href="https://discord.gg/5v6s6rs" target="_blank" rel="noreferrer">chat room</a>, and ask for help. Be sure to include the entire output from your terminal when you ask your question.</p><h4 id="step-39-visit-your-new-application">Step 3.9: Visit Your New Application</h4><p>It’s time to see your app on the web! If you are not using WSL, to quickly open your app, type</p><pre class=" language-bash"><code class=" language-bash">heroku <span class="token function">open</span>
+</code></pre><p>and play around with it!</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="step-4-let-us-know-how-it-went"><h3><a href="https://www.theodinproject.com/courses/web-development-101/lessons/your-first-rails-application?ref=lnav#step-4-let-us-know-how-it-went" class="internal-link">Step 4: Let us know how it went!</a></h3><p>You have successfully completed the installations. Congratulations!!! This was <strong>the hardest part</strong> of the entire Odin Project.</p><p>You probably felt like you were in way over your head, and you probably didn’t understand much of what you were doing. That’s 100% normal. Hang in there. You can do this! And we’ve got your back.</p></div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lesson-functions">
+  <div class="container">
+    <div class="card-main">
+      <h1 class="lesson-functions__title">
+        Web Development 101
+      </h1>
+
+      <h3 class="lesson-functions__sub-title accent bold">
+        Project: Your First Rails Application
+      </h3>
+
+      <div class="lesson-button-group">
+        <a title="Go back to &#39;Web Development 101&#39;" class="button button--secondary lesson-button-group__item lesson-button" href="https://www.theodinproject.com/courses/web-development-101?ref=lnav">View Course</a>
+
+    <a class="button button--primary lesson-button-group__item lesson-button" title="Mark lesson complete" data-remote="true" rel="nofollow" data-method="post" href="https://www.theodinproject.com/lessons/your-first-rails-application/lesson_completions">
+    <i class="lesson-button__icon far fa-check-circle" aria-hidden="true"></i>Complete
+</a>
+
+
+  <a title="Move on to &#39;Introduction to Git&#39;" class="button button--secondary lesson-button-group__item lesson-button" href="https://www.theodinproject.com/courses/web-development-101/lessons/introduction-to-git?ref=lnav">Next Lesson</a>
+
+      </div>
+
+    </div>
+
+    <div class="bottom-cta">
+  <p class="bottom-cta__heading">Have a question?</p>
+
+  <p class="bottom-cta__sub-heading">Chat with our friendly Odin community in our Discord chatrooms!</p>
+  <a class="button button--secondary" target="_blank" rel="noreferrer" href="https://discord.gg/hvqVr6d">Open Discord</a>
+</div>
+
+
+    <div class="card-main viking-advert">
+  <div class="viking-advert__header">
+    <h2 class="viking-advert__pitch">Are you interested in accelerating your web development learning experience?</h2>
+    <a href="https://www.thinkful.com/?utm_source=odin&amp;utm_medium=cpc&amp;utm_campaign=odin-homepage&amp;utm_content=web-dev-3-icons" class="button button--primary">Get started</a>
+  </div>
+  <div class="viking-advert__body">
+    <a href="https://www.thinkful.com/?utm_source=odin&amp;utm_medium=cpc&amp;utm_campaign=odin-homepage&amp;utm_content=tf-logo" alt="Thinkful" class="viking-advert__brand-anchor">
+        <div class="viking-advert__brand">
+          <img alt="Thinkful Logo" class="viking-advert__logo" src="./Project_ Your First Rails Application _ The Odin Project_files/thinkful-logo-5c7769d5133f864afc2ed1c52c2609e30979fdd41f79fd7f8c2db987ea8265e5.svg">
+          <h2 class="viking-advert__brand-name">Thinkful</h2>
+        </div>
+    </a>
+    <ul class="viking-advert__icons-group">
+      <li class="viking-advert__icons-group-item">
+        <img alt="5-6 months" class="viking-advert__icon" src="./Project_ Your First Rails Application _ The Odin Project_files/icon-calendar-09863d55e004300829ed648c4a6862353fec56b23320bab6bbbaf51fd429d2fe.svg">
+        <p class="viking-advert__icon-text">5-6 months</p>
+      </li>
+
+      <li class="viking-advert__icons-group-item">
+        <img alt="Job Guarantee" class="viking-advert__icon" src="./Project_ Your First Rails Application _ The Odin Project_files/icon-guarantee-ccd384fdc7c57a4ee54bebc9b185fb7eda6e188290692f8d0ad95d7471f8f2bc.svg">
+        <p class="viking-advert__icon-text">Job Guarantee</p>
+      </li>
+
+      <li class="viking-advert__icons-group-item">
+        <img alt="1-on-1 Mentorship" class="viking-advert__icon" src="./Project_ Your First Rails Application _ The Odin Project_files/icon-mentor-40cdd9a79b9729dfd47c3d90ccdff710ba450dd405ab207042eec86c154ceb44.svg">
+        <p class="viking-advert__icon-text">1-on-1 Mentorship</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  </div>
+</div>
+
+  <div class="modal modal-main fade" id="project-report-modal" tabindex="-1" role="dialog" data-backdrop="true" aria-labelledby="projectReportModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-main__header">
+        <button type="button" class="close modal-main__close-icon" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="card-main card-main--shadowless report-project-form">
+  <div class="col-12">
+    <h1 class="text-center">Report project</h1>
+
+    <form class="form" action="https://www.theodinproject.com/reports" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+      <input type="hidden" name="project_id" id="project_id">
+
+      <div class="form__section">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" required="required" class="form__element report-project-form__description" placeholder="Tell us why you think we should flag the submission"></textarea>
+      </div>
+
+      <div class="text-center">
+        <input type="submit" name="commit" value="Report project" class="button button--primary report-project-form__report-button" data-disable-with="Report project">
+      </div>
+</form>  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div id="project-submission-modal-wrapper">
+    <div class="modal modal-main fade" id="project-submission-modal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="projectSubmissionModal" aria-hidden="true" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-main__header">
+        <button type="button" class="close modal-main__close-icon" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="card-main card-main--shadowless project-form">
+  <h1 class="text-center project-form__title accent">Upload your project</h1>
+
+  <form class="new_project" id="new_project" action="https://www.theodinproject.com/lessons/your-first-rails-application/projects" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+    <div class="form__section">
+      <span class="fab fa-github form__icon"></span>
+      <input class="form__element form__element--with-icon" placeholder="Repository URL" type="text" name="project[repo_url]" id="project_repo_url">
+    </div>
+
+      <div class="form__section">
+        <span class="fas fa-paperclip form__icon"></span>
+        <input class="form__element form__element--with-icon" placeholder="Live Preview URL" type="text" name="project[live_preview]" id="project_live_preview">
+      </div>
+
+    <div class="form__section text-center">
+      <input type="submit" name="commit" value="Upload project" class="button button--primary project-form__button project-form__submit-btn" disable_with="Uploading project..." data-disable-with="Upload project">
+    </div>
+
+    <div class="form__section text-center">
+      <button name="button" type="button" class="button project-form__button" data-dismiss="modal">Cancel</button>
+    </div>
+
+</form></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+
+    </div>
+
+    <footer id="footer">
+  <div class="footer-brand">
+    <a class="logo" href="https://www.theodinproject.com/home">
+  <img class="logo__img" src="./Project_ Your First Rails Application _ The Odin Project_files/odin-logo-94557650fea28e24cc04263ece9c08ab5956e0d344faa4d03cdb732e9f9983d4.svg">
+  <div class="logo__text"> The Odin Project </div>
+</a>
+  </div>
+  <div class="footer-social">
+    <a href="https://github.com/TheOdinProject"><span aria-label="github" class="accent fab fa-github"></span></a>
+    <a href="https://discord.gg/hvqVr6d"><span aria-label="discord chat" class="accent fab fa-discord"></span></a>
+    <a href="https://www.facebook.com/theodinproject/"><span aria-label="facebook" class="accent fab fa-facebook"></span></a>
+    <a href="https://twitter.com/TheOdinProject"><span aria-label="twitter" class="accent fab fa-twitter"></span></a>
+  </div>
+  <div class="footer-links">
+    <div class="footer-links-container">
+      <a class="footer-link" href="https://www.theodinproject.com/about">About</a>
+      <a class="footer-link" href="https://www.theodinproject.com/faq">FAQ</a>
+      <a target="_blank" rel="noreferrer" class="footer-link" href="https://medium.com/the-odin-project">Blog</a>
+    </div>
+    <div class="footer-links-container">
+      <a class="footer-link" href="https://www.theodinproject.com/success_stories">Success Stories</a>
+      <a class="footer-link" href="https://www.theodinproject.com/contributing">Contribute</a>
+      <a class="footer-link" href="https://www.theodinproject.com/terms_of_use">Terms of Use</a>
+    </div>
+  </div>
+
+</footer>
+
+    <div class="floating-dropdown">
+  <div class="floating-dropdown__item floating-dropdown--hidden-item text-center" data-toggle="tooltip" data-placement="left" title="Chat">
+    <a target="_blank" rel="noreferrer" href="https://discord.gg/hvqVr6d">
+      <i class="fas fa-comment"></i>
+</a>  </div>
+  <div class="floating-dropdown__item floating-dropdown--hidden-item text-center" data-toggle="tooltip" data-placement="left" title="Forum">
+    <a target="_blank" rel="noreferrer" href="https://forum.theodinproject.com/">
+      <i class="fas fa-users" aria-hidden="true"></i>
+</a>  </div>
+  <div class="floating-dropdown__item main-floating-btn">
+    <i class="fas fa-comments" aria-hidden="true"></i>
+  </div>
+</div>
+    <!-- Google Analytics Tracking Snippet -->
+<!-- Only load it if we're in a production environment! -->
+  
+  
+
+  <script type="text/javascript">  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41005438-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+    
+  
+
+</body></html>
